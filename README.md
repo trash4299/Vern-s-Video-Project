@@ -3,7 +3,6 @@
 This was my year-end project for my AP Computer Science A course. I already turned it in, but I am coming back to it and I wnat to add the following list of updates:
 
 -add security like password system
-
 -password to delete accounts
 
 -edit accounts
