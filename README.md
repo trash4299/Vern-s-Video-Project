@@ -12,7 +12,7 @@ This was my year-end project for my AP Computer Science A course. It was meant t
 
 -add pricing system
 
--remember the pathway to the movielist used last time
+-auto-imports on startup and error screen when if it doesnt work with browse for movie and user list
 
 -add auto-import list setting
 
