@@ -1,6 +1,6 @@
-# Verns-Video-Project
+# Verns-Video-Store-Project
 
-This was my year-end project for my AP Computer Science A course. I already turned it in, but I am coming back to it and I wnat to add the following list of updates:
+This was my year-end project for my AP Computer Science A course. It was meant to emulate an interface for a video store like Blockbuster, where people can come and rent movies. I already turned it in, but I am coming back to it and I wnat to add the following list of updates:
 
 -add security like password system
 
