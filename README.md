@@ -16,4 +16,4 @@ This was my year-end project for my AP Computer Science A course. It was meant t
 
 -add auto-import list setting
 
-It uses the list of movies in the .txt file and saves it to that
+It uses the list of movies in the .txt file and saves it to that. The main file is Verns.
