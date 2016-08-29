@@ -16,4 +16,4 @@ This was my year-end project for my AP Computer Science A course. It was meant t
 
 -add auto-import list setting
 
-It uses the list of movies in the .txt file and saves it to that. Opening Main is just a way of opening Verns that looks cleaner because Verns contains quite a bit of the code.
+It uses the list of movies in the .txt file and saves it to that. I added an example .txt file. Opening Main is just a way of opening Verns that looks cleaner because Verns contains quite a bit of the code.
