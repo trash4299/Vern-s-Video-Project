@@ -2,6 +2,8 @@
 
 This was my year-end project for my AP Computer Science A course. It was meant to emulate an interface for a video store like Blockbuster, where people can come and rent movies. I already turned it in, but I am coming back to it and I wnat to add the following list of updates:
 
+-autoscan and browse option for where the memberlist and movielist is (side note for me: create it for memberlist first and then copy it to movielist)
+
 -add security like password system
 
 -password to delete accounts
