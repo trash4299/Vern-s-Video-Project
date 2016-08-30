@@ -4,7 +4,7 @@ This was my year-end project for my AP Computer Science A course. It was meant t
 
 -autoscan and browse option for where the memberlist and movielist is (side note for me: create it for memberlist first and then copy it to movielist)
 
--add security like password system
+-add security like password system (Admin class)
 
 -password to delete accounts
 
