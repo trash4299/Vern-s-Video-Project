@@ -9,40 +9,54 @@ public class Admin
     private String password;
     private String q;
     private String s;
-    public JFrame frame = new JFrame();
+    public JFrame frame;
    
     public Admin()
     {
         firstTime=true;
         s="";
         q="";
+        frame = new JFrame();
     }
     
-    public void setCreds()
+    public void trySetCreds()
     {
-        //remember to replace all /'s with double slashes
         if(firstTime==false)
         {
-            s = JOptionPane.showInputDialog(frame,"Enter a new password:","Set Password",JOptionPane.PLAIN_MESSAGE);
-            q = JOptionPane.showInputDialog(frame,"Re-enter password:","Set Password",JOptionPane.PLAIN_MESSAGE);
+            do
+            {
+                s = JOptionPane.showInputDialog(frame,"Enter a new password:","Set Password",JOptionPane.PLAIN_MESSAGE);
+                q = JOptionPane.showInputDialog(frame,"Re-enter password:","Set Password",JOptionPane.PLAIN_MESSAGE);
+                s.replaceAll("//","////");
+                q.replaceAll("//","////");
+            }while(s.equals(q)==false);
         }
         else
         {
+            setCreds();
+        }
+    }
+    
+    private void setCreds()
+    {
+        do
+        {
             s = JOptionPane.showInputDialog(frame,"Enter a new password:","Set Password",JOptionPane.PLAIN_MESSAGE);
             q = JOptionPane.showInputDialog(frame,"Re-enter password:","Set Password",JOptionPane.PLAIN_MESSAGE);
-            if(s.equals(q)==false)
-            {
-                int n = JOptionPane.showConfirmDialog(frame,"Passwords do not match. Try again or cancel.","Error",JOptionPane.OK_CANCEL_OPTION,JOptionPane.ERROR_MESSAGE);
-                /*
-                if()
-                    
-                while()
-                {
-                    
-                }
-                */
-            }
-        }
+            s.replaceAll("//","////");
+            q.replaceAll("//","////");
+        }while(contCheck()==true);
+    }
+    
+    private boolean contCheck()
+    {
+        if(s.equals(q))
+            return false;
+        int n = JOptionPane.showConfirmDialog(frame,"Passwords do not match. Try again or cancel.","Error",JOptionPane.OK_CANCEL_OPTION,JOptionPane.ERROR_MESSAGE);
+        if(n==0)
+            return true;
+        else 
+            return false;
     }
     
     public int checkCreds(String in)
@@ -53,6 +67,5 @@ public class Admin
             return 1;
         else
             return -1;
-            
     }
-   }
+}
