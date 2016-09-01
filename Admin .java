@@ -9,6 +9,7 @@ public class Admin
     private String password;
     private String q;
     private String s;
+    public JFrame frame = new JFrame();
    
     public Admin()
     {
@@ -22,18 +23,24 @@ public class Admin
         //remember to replace all /'s with double slashes
         if(firstTime==false)
         {
-            
+            s = JOptionPane.showInputDialog(frame,"Enter a new password:","Set Password",JOptionPane.PLAIN_MESSAGE);
+            q = JOptionPane.showInputDialog(frame,"Re-enter password:","Set Password",JOptionPane.PLAIN_MESSAGE);
         }
         else
         {
-            JFrame frame = new JFrame();
             s = JOptionPane.showInputDialog(frame,"Enter a new password:","Set Password",JOptionPane.PLAIN_MESSAGE);
             q = JOptionPane.showInputDialog(frame,"Re-enter password:","Set Password",JOptionPane.PLAIN_MESSAGE);
             if(s.equals(q)==false)
             {
-                int n = JOptionPane.showConfirmDialog(frame, " Try new password or JOptionPane.YES_NO_OPTION","Passwords do not match" );
+                int n = JOptionPane.showConfirmDialog(frame,"Passwords do not match. Try again or cancel.","Error",JOptionPane.OK_CANCEL_OPTION,JOptionPane.ERROR_MESSAGE);
+                /*
                 if()
+                    
                 while()
+                {
+                    
+                }
+                */
             }
         }
     }
@@ -46,6 +53,6 @@ public class Admin
             return 1;
         else
             return -1;
-        
+            
     }
-}
+   }
