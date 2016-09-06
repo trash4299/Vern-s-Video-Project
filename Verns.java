@@ -46,19 +46,13 @@ public class Verns extends javax.swing.JFrame
     private MemberList memList;
     private MovieList movList;
     private final String LOC;
+    private Admin security;
     
     public Verns()
     {
         memList = new MemberList();
         movList = new MovieList();
-        LOC = Paths.get(".").toAbsolutePath().normalize().toString();
-        initComponents();
-        main();
-    }
-    
-    @SuppressWarnings("unchecked")                      
-    private void initComponents()
-    {
+        security = new Admin();
         jScrollPane4 = new JScrollPane();
         jScrollPane1 = new JScrollPane();
         jTextPane1 = new JTextPane();
@@ -82,6 +76,16 @@ public class Verns extends javax.swing.JFrame
         jMenuItem5 = new JMenuItem();
         jMenuItem6 = new JMenuItem();
         jMenuItem7 = new JMenuItem();
+        
+        LOC = Paths.get(".").toAbsolutePath().normalize().toString();
+        initComponents();
+        main();
+    }
+    
+    @SuppressWarnings("unchecked")                      
+    private void initComponents()
+    {
+        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         jTextArea1.setEditable(false);
         jTextArea2.setEditable(false);
         
@@ -254,11 +258,7 @@ public class Verns extends javax.swing.JFrame
                 int PromptResult = JOptionPane.showOptionDialog(null, "Have you saved?","Are you sure you want to exit?",JOptionPane.DEFAULT_OPTION,JOptionPane.WARNING_MESSAGE,null,ObjButtons,ObjButtons[1]);
                 if(PromptResult==JOptionPane.YES_OPTION)
                 {
-                    System.exit(0);
-                }
-                else
-                {
-                    main();
+                    setVisible(false);
                 }
             }
         });
@@ -333,7 +333,7 @@ public class Verns extends javax.swing.JFrame
     
     public void main()
     {
-         try 
+         try
          {
              for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels())
              {
@@ -344,23 +344,10 @@ public class Verns extends javax.swing.JFrame
                  }
              }
          }
-         catch (ClassNotFoundException ex)
+         catch (Exception ex)
          {
              java.util.logging.Logger.getLogger(Verns.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
          }
-         catch (InstantiationException ex)
-         {
-             java.util.logging.Logger.getLogger(Verns.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-         }
-         catch (IllegalAccessException ex)
-         {
-             java.util.logging.Logger.getLogger(Verns.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-         }
-         catch (javax.swing.UnsupportedLookAndFeelException ex)
-         {
-             java.util.logging.Logger.getLogger(Verns.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-         }
-         
          EventQueue.invokeLater(new Runnable(){
              public void run()
              {
@@ -368,8 +355,6 @@ public class Verns extends javax.swing.JFrame
              }
          });
     }
+    
+    
 }
-
-
-
-
