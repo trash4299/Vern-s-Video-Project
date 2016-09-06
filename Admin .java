@@ -21,7 +21,7 @@ public class Admin
     
     public void trySetCreds()
     {
-        if(firstTime==false)
+        if(firstTime==true)
         {
             do
             {
